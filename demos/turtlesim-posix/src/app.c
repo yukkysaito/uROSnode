@@ -379,7 +379,7 @@ turtle_t *turtle_spawn(const UrosString *namep,
   }
 
 #define _BUILDFIELD(field, endsz) \
-  { turtlep->poseTopic.datap[0] = '/'; \
+  { turtlep->field.datap[0] = '/'; \
     memcpy(1 + turtlep->field.datap, namep->datap, namep->length); \
     memcpy(1 + turtlep->field.datap + namep->length, endsz, strlen(endsz) + 1); }
 
